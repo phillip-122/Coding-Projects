@@ -1,3 +1,9 @@
+'''
+This Is my Reddit Post Analyzer. It analyzes post trends, performance, and engagement metrics across subreddits
+The main tools that it utilizes is Pandas, Sentiment Analysis, Wordcloud, and MatPlotLib
+'''
+
+
 import requests
 import pandas as pd 
 import matplotlib.pyplot as plt
@@ -347,27 +353,5 @@ def main():
     
 if __name__ == "__main__":
     main()
-
-
-
-''' This is a template of how to add different sections to the dataframe
-
-data = []
-for post in res.json()['data']['children']:
-    data.append({
-        'subreddit': post['data']['subreddit'],
-        'title': post['data']['title'],
-        'selftext': post['data']['selftext'],
-        'upvote_ratio': post['data']['upvote_ratio'],
-        'ups': post['data']['ups'],
-        'downs': post['data']['downs'],
-        'score': post['data']['score']
-    })
-df = pd.DataFrame(data)
-
-    '''
-# print(post['data'].keys()) this can show the keys we can use
-
-# print(post['kind'] + '_' + post['data']['id']) find a post after a certain post
 
 
